@@ -1,0 +1,12 @@
+<h1>Products</h1>
+
+<%= link_to "New product", new_product_path %>
+
+<div id="products">
+  <% @products.each do | product | %>
+		<div>
+			<h2> <%= link_to product.name, product_path(product.id) %> </h2>
+		</div>
+	<%end%>
+</div>		
+
